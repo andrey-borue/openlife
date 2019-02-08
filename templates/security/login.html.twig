@@ -1,0 +1,47 @@
+{% set login_page_background = '/img/main_background1.jpg' %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Зайди в меня</title>
+    <link href="{{ asset('css/login-page.css') }}" rel="stylesheet" type="text/css" media="all" />
+    <link href="//fonts.googleapis.com/css?family=Cormorant+SC:300,400,500,600,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+
+</head>
+<body>
+
+
+<div class="padding-all">
+    {#<div class="header">#}
+        {#<h1>Master  Login Form</h1>#}
+    {#</div>#}
+    <div class="design-w3l">
+        <div class="mail-form-agile">
+
+            <form method="post">
+
+                {% if error %}
+                    <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                {% endif %}
+
+                <input type="email" value="{{ last_username }}" name="_username" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
+                <input type="password" name="_password" id="inputPassword" class="padding" placeholder="Password" required>
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}" >
+                <input type="submit" value="login">
+            </form>
+        </div>
+        <div class="clear"> </div>
+    </div>
+
+</div>
+
+
+
+
+</body>
+</html>
+
+
+
+

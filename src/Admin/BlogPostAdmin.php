@@ -2,10 +2,11 @@
 
 namespace App\Admin;
 
-use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Form\FormMapper;
+use Sonata\AdminBundle\Route\RouteCollection;
+use Sonata\AdminBundle\Show\ShowMapper;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Sonata\FormatterBundle\Form\Type\SimpleFormatterType;
 
@@ -15,6 +16,7 @@ final class BlogPostAdmin extends AbstractAdmin
     {
         $formMapper
             ->add('title', TextType::class)
+            ->add('url', TextType::class)
             ->add('body', SimpleFormatterType::class, [
                 'format' => 'richhtml',
                 'ckeditor_toolbar_icons' => [[
@@ -37,9 +39,30 @@ final class BlogPostAdmin extends AbstractAdmin
 
     protected function configureListFields(ListMapper $listMapper)
     {
+        $this->addListFieldsEditAction($listMapper);
         $listMapper
-            ->addIdentifier('title')
+            ->add('id')
+            ->add('title')
             ->add('createdAt')
+            ->add('updatedAt')
         ;
+    }
+
+    protected function configureShowFields(ShowMapper $showMapper)
+    {
+        $showMapper
+            ->add('id')
+            ->add('title')
+            ->add('url')
+            ->add('body')
+            ->add('createdAt')
+            ->add('updatedAt')
+        ;
+    }
+
+    protected function configureRoutes(RouteCollection $collection)
+    {
+        $collection
+            ->remove('delete');
     }
 }

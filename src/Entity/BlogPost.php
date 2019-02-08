@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\BlogPostRepository")
@@ -22,6 +23,11 @@ class BlogPost
     private $title;
 
     /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $url;
+
+    /**
      * @ORM\Column(type="text")
      */
     private $body;
@@ -32,6 +38,7 @@ class BlogPost
     private $createdAt;
 
     /**
+     * @Gedmo\Timestampable(on="update")
      * @ORM\Column(type="datetime")
      */
     private $updatedAt;
@@ -111,5 +118,22 @@ class BlogPost
         $this->status = $status;
 
         return $this;
+    }
+
+    public function getUrl(): ?string
+    {
+        return $this->url;
+    }
+
+    public function setUrl(?string $url): self
+    {
+        $this->url = $url;
+
+        return $this;
+    }
+
+    public function __toString()
+    {
+        return sprintf('[%d] %s', $this->getId(), $this->getTitle());
     }
 }
