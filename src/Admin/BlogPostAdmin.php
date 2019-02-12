@@ -19,6 +19,9 @@ final class BlogPostAdmin extends AbstractAdmin
             ->add('url', TextType::class)
             ->add('body', SimpleFormatterType::class, [
                 'format' => 'richhtml',
+//                'ckeditor_context'     => 'default',
+//                'source_field'         => 'body',
+//                'source_field_options' => ['attr' => ['class' => 'span10', 'rows' => 20]],
                 'ckeditor_toolbar_icons' => [[
                     'Bold', 'Italic', 'Underline', 'Format',
                     '-', 'Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord',

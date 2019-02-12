@@ -26,4 +26,9 @@ return [
     Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle::class => ['dev' => true, 'test' => true],
     SimpleThings\EntityAudit\SimpleThingsEntityAuditBundle::class => ['all' => true],
     Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle::class => ['all' => true],
+    Symfony\WebpackEncoreBundle\WebpackEncoreBundle::class => ['all' => true],
+    Sonata\EasyExtendsBundle\SonataEasyExtendsBundle::class => ['all' => true],
+    JMS\SerializerBundle\JMSSerializerBundle::class => ['all' => true],
+    Sonata\MediaBundle\SonataMediaBundle::class => ['all' => true],
+    App\Application\Sonata\MediaBundle\ApplicationSonataMediaBundle::class => ['all' => true]
 ];

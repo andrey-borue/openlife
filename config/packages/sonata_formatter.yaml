@@ -24,3 +24,7 @@ sonata_formatter:
       twig:
         service: sonata.formatter.text.twigengine
         extensions: []
+    ckeditor:
+      templates:
+        browser: '@SonataFormatter/Ckeditor/browser.html.twig'
+        upload: '@SonataFormatter/Ckeditor/upload.html.twig'
