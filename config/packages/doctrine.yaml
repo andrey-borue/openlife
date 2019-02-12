@@ -31,3 +31,4 @@ doctrine:
                 alias: App
             SonataMediaBundle: ~
             ApplicationSonataMediaBundle: ~
+            SonataClassificationBundle: ~

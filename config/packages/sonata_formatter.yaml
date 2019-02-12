@@ -28,3 +28,4 @@ sonata_formatter:
       templates:
         browser: '@SonataFormatter/Ckeditor/browser.html.twig'
         upload: '@SonataFormatter/Ckeditor/upload.html.twig'
+
