@@ -269,6 +269,9 @@
     "sonata-project/google-authenticator": {
         "version": "2.2.0"
     },
+    "sonata-project/intl-bundle": {
+        "version": "2.5.0"
+    },
     "sonata-project/media-bundle": {
         "version": "3.13",
         "recipe": {
@@ -277,6 +280,9 @@
             "version": "3.13",
             "ref": "e25412e53b20827db07abb6f2aa0b8e4d26c284c"
         }
+    },
+    "sonata-project/news-bundle": {
+        "version": "3.8.0"
     },
     "sonata-project/user-bundle": {
         "version": "4.3.0"

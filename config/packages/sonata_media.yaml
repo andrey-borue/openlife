@@ -5,7 +5,7 @@ sonata_media:
         media: App\Application\Sonata\MediaBundle\Entity\Media
         gallery: App\Application\Sonata\MediaBundle\Entity\Gallery
         gallery_has_media: App\Application\Sonata\MediaBundle\Entity\GalleryHasMedia
-        category: App\Entity\SonataClassificationCategory
+        category: App\Application\Sonata\ClassificationBundle\Entity\Category
 
     contexts:
         default:
@@ -14,6 +14,16 @@ sonata_media:
                 - sonata.media.provider.youtube
                 - sonata.media.provider.image
                 - sonata.media.provider.file
+                - sonata.media.provider.vimeo
+
+            formats:
+                small: { width: 100 , quality: 70}
+                big:   { width: 500 , quality: 70}
+
+        news:
+            providers:
+                - sonata.media.provider.youtube
+                - sonata.media.provider.image
                 - sonata.media.provider.vimeo
 
             formats:

@@ -1,0 +1,20 @@
+sonata_news:
+  title:        Open life
+  link:         https://openlife.guru
+  description:  Cool bundles on top of Symfony2
+  salt:         'aksdh498hra;lkdfh'
+  permalink_generator: sonata.news.permalink.collection #sonata.news.permalink.date # sonata.news.permalink.collection
+
+  comment:
+    notification:
+      emails:   [email@example.org, email2@example.org]
+      from:     no-reply@sonata-project.org
+      template: '@SonataNews/Mail/comment_notification.txt.twig'
+
+  class:
+    post:       App\Application\Sonata\NewsBundle\Entity\Post
+    comment:    App\Application\Sonata\NewsBundle\Entity\Comment
+    media:      App\Application\Sonata\MediaBundle\Entity\Media
+    user:       App\Application\Sonata\UserBundle\Entity\User
+    tag:        App\Application\Sonata\ClassificationBundle\Entity\Tag
+    collection: App\Application\Sonata\ClassificationBundle\Entity\Collection
