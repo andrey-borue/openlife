@@ -104,6 +104,9 @@
     "friendsofsymfony/ckeditor-bundle": {
         "version": "1.2.0"
     },
+    "friendsofsymfony/user-bundle": {
+        "version": "v2.1.2"
+    },
     "gedmo/doctrine-extensions": {
         "version": "v2.4.36"
     },
@@ -263,6 +266,9 @@
     "sonata-project/formatter-bundle": {
         "version": "4.1.2"
     },
+    "sonata-project/google-authenticator": {
+        "version": "2.2.0"
+    },
     "sonata-project/media-bundle": {
         "version": "3.13",
         "recipe": {
@@ -271,6 +277,9 @@
             "version": "3.13",
             "ref": "e25412e53b20827db07abb6f2aa0b8e4d26c284c"
         }
+    },
+    "sonata-project/user-bundle": {
+        "version": "4.3.0"
     },
     "stof/doctrine-extensions-bundle": {
         "version": "1.2",

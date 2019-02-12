@@ -32,3 +32,5 @@ doctrine:
             SonataMediaBundle: ~
             ApplicationSonataMediaBundle: ~
             SonataClassificationBundle: ~
+            FOSUserBundle: ~
+            ApplicationSonataUserBundle: ~
