@@ -37,3 +37,5 @@ doctrine:
             ApplicationSonataNewsBundle: ~
             SonataNewsBundle: ~
             ApplicationSonataClassificationBundle: ~
+#            ApplicationSonataNotificationBundle: ~
+            SonataNotificationBundle: ~

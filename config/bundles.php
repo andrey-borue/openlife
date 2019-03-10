@@ -39,4 +39,7 @@ return [
     Sonata\IntlBundle\SonataIntlBundle::class => ['all' => true],
     Sonata\NewsBundle\SonataNewsBundle::class => ['all' => true],
     App\Application\Sonata\NewsBundle\ApplicationSonataNewsBundle::class => ['all' => true],
+    Sonata\CacheBundle\SonataCacheBundle::class => ['all' => true],
+    Sonata\SeoBundle\SonataSeoBundle::class => ['all' => true],
+    Sonata\NotificationBundle\SonataNotificationBundle::class => ['all' => true],
 ];

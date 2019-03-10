@@ -230,6 +230,9 @@
     "sonata-project/cache": {
         "version": "2.0.1"
     },
+    "sonata-project/cache-bundle": {
+        "version": "3.0.1"
+    },
     "sonata-project/classification-bundle": {
         "version": "3.7",
         "recipe": {
@@ -283,6 +286,21 @@
     },
     "sonata-project/news-bundle": {
         "version": "3.8.0"
+    },
+    "sonata-project/notification-bundle": {
+        "version": "3.4",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "3.4",
+            "ref": "222a1549f627f9faef39c0dd3cba1194a5175c00"
+        },
+        "files": [
+            "config/packages/sonata_notification.yaml"
+        ]
+    },
+    "sonata-project/seo-bundle": {
+        "version": "2.7.0"
     },
     "sonata-project/user-bundle": {
         "version": "4.3.0"
@@ -610,5 +628,8 @@
     },
     "zendframework/zend-eventmanager": {
         "version": "3.2.1"
+    },
+    "zendframework/zenddiagnostics": {
+        "version": "v1.4.0"
     }
 }
