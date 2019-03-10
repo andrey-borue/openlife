@@ -29,21 +29,14 @@ return [
     Symfony\WebpackEncoreBundle\WebpackEncoreBundle::class => ['all' => true],
     Sonata\EasyExtendsBundle\SonataEasyExtendsBundle::class => ['all' => true],
     JMS\SerializerBundle\JMSSerializerBundle::class => ['all' => true],
-    // Media
     Sonata\MediaBundle\SonataMediaBundle::class => ['all' => true],
     App\Application\Sonata\MediaBundle\ApplicationSonataMediaBundle::class => ['all' => true],
-    // Classification
     Sonata\ClassificationBundle\SonataClassificationBundle::class => ['all' => true],
     App\Application\Sonata\ClassificationBundle\ApplicationSonataClassificationBundle::class => ['all' => true],
-    // User
     FOS\UserBundle\FOSUserBundle::class => ['all' => true],
     Sonata\UserBundle\SonataUserBundle::class => ['all' => true],
     App\Application\Sonata\UserBundle\ApplicationSonataUserBundle::class => ['all' => true],
-    // Intl
     Sonata\IntlBundle\SonataIntlBundle::class => ['all' => true],
-    // News
     Sonata\NewsBundle\SonataNewsBundle::class => ['all' => true],
     App\Application\Sonata\NewsBundle\ApplicationSonataNewsBundle::class => ['all' => true],
-
-
 ];
