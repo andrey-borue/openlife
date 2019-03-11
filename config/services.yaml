@@ -34,3 +34,7 @@ services:
         tags:
             - { name: sonata.admin, manager_type: orm, label: Blog post, group: Blog Posts, audit: true, on_top: true }
 
+#    app.page_admin.extension:
+#        class: App\Admin\Extension\PageAdminExtension
+#        tags:
+#            - { name: sonata.admin.extension, target: sonata.page.admin.page }

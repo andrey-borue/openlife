@@ -1,0 +1,12 @@
+#sonata_article:
+#  class:
+#    article:  App\Application\Sonata\ArticleBundle\Entity\Article
+#    fragment: App\Application\Sonata\ArticleBundle\Entity\Fragment
+#    tag: App\Application\Sonata\ClassificationBundle\Entity\Tag
+#    media: App\Application\Sonata\MediaBundle\Entity\Media
+#    category: App\Application\Sonata\ClassificationBundle\Entity\Category
+#
+#  fragment_whitelist_provider:
+#    simple_array_provider:
+#      - sonata.article.fragment.title
+#      - sonata.article.fragment.text

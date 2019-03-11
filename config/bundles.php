@@ -42,4 +42,9 @@ return [
     Sonata\CacheBundle\SonataCacheBundle::class => ['all' => true],
     Sonata\SeoBundle\SonataSeoBundle::class => ['all' => true],
     Sonata\NotificationBundle\SonataNotificationBundle::class => ['all' => true],
+//    Symfony\Cmf\Bundle\RoutingBundle\CmfRoutingBundle::class => ['all' => true],
+//    Sonata\PageBundle\SonataPageBundle::class => ['all' => true],
+//    App\Application\Sonata\PageBundle\ApplicationSonataPageBundle::class => ['all' => true],
+//    Sonata\ArticleBundle\SonataArticleBundle::class => ['all' => true],
+    App\Application\Sonata\ArticleBundle\ApplicationSonataArticleBundle::class => ['all' => true],
 ];

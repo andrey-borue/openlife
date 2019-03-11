@@ -12,4 +12,4 @@ sonata_user_admin_resetting:
 
 news:
   resource: '@SonataNewsBundle/Resources/config/routing/news.xml'
-  prefix: /news
+  prefix: /blog
