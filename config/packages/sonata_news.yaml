@@ -18,3 +18,4 @@ sonata_news:
     user:       App\Application\Sonata\UserBundle\Entity\User
     tag:        App\Application\Sonata\ClassificationBundle\Entity\Tag
     collection: App\Application\Sonata\ClassificationBundle\Entity\Collection
+

@@ -6,7 +6,6 @@
 
     <main role="main" class="container">
 
-
         <div class="row">
             <div class="col-md-8 blog-main">
                 {% block sonata_page_breadcrumb %}
@@ -14,7 +13,6 @@
                         {{ sonata_block_render_event('breadcrumb', { 'context': 'news_post', 'post': post, 'current_uri': app.request.requestUri }) }}
                     </div>
                 {% endblock %}
-
 
 
                 {% if not post.isPublic %}
@@ -26,36 +24,9 @@
                     </div>
                 {% endif %}
 
-
-                <div class="sonata-blog-post-information">
-                    <div class="sonata-blog-post-tag-container">
-                        <span class="sonata-blog-post-tag-title">
-                            {% if post.tags|length > 1 %}
-                                <i class="icon-tags"></i>
-                            {% else %}
-                                <i class="icon-tag"></i>
-                            {% endif %}
-                            {{ 'published_under'|transchoice(post.tags|length, {}, 'SonataNewsBundle') }}
-                        </span>
-                        <span class="sonata-blog-post-tag-list">
-                            {% for tag in post.tags %}
-                                <a href="{{ url('sonata_news_tag', { 'tag': tag.slug } ) }}">{{ tag.name }}</a>
-                            {% endfor %}
-                        </span>
-                    </div>
-                </div>
-
-
-                {#<h3 class="pb-3 mb-4 font-italic border-bottom">#}
-                    {#From the Firehose#}
-                {#</h3>#}
-
                 <div class="blog-post">
                     <h2 class="blog-post-title">{{ post.title }}</h2>
-                    <p class="blog-post-meta">
-                        <i class="icon-calendar"></i> {{ post.publicationDateStart | format_date }}
-                        <a href="#">{{ 'archive_author'|trans({'%author%': post.author }, 'SonataNewsBundle') }}</a>
-                    </p>
+                    {% include "bundles/SonataNewsBundle/Post/header-meta.html.twig" %}
 
                     {% media post.image, 'wide' %}
                     {{ post.content|raw }}
