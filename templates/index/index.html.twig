@@ -5,31 +5,36 @@
 {% block body %}
 
     <div class="container">
-        {% include 'index/blog-post-big-preview.html.twig' %}
+        {% if mainTopPost %}
+            {% include 'index/blog-post-big-preview.html.twig' with {'post': mainTopPost} only %}
+        {%  endif %}
 
-
-        <div class="row mb-2">
-            {% include 'index/blog-post-preview-md-6.html.twig' %}
-            {% include 'index/blog-post-preview-md-6.html.twig' %}
-        </div>
+        {#<div class="row mb-2">#}
+            {#{% for post in otherTopPosts %}#}
+                {#{% include 'index/blog-post-preview-md-6.html.twig' with {'post': post} only %}#}
+            {#{% endfor %}#}
+        {#</div>#}
     </div>
-
 
 
     <main role="main" class="container">
         <div class="row">
             <div class="col-md-8 blog-main">
-                <h3 class="pb-3 mb-4 font-italic border-bottom">
-                    From the Firehose
-                </h3>
+                {#<h3 class="pb-3 mb-4 font-italic border-bottom">#}
+                    {#From the Firehose#}
+                {#</h3>#}
 
-                <div class="blog-post">
-                    <h2 class="blog-post-title">Первый свинг-клуб</h2>
-                    <p class="blog-post-meta">28 января 2018 года, автор <a href="#">Милена</a></p>
+                {% for post in lastPosts %}
+                    <div class="blog-post">
+                        <h2 class="blog-post-title">{{ post.title }}</h2>
+                        {% include "bundles/SonataNewsBundle/Post/header-meta.html.twig" with {'post': post} only %}
 
-                    <p>Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.</p>
-                    <a href="#">Продолжение...</a>
-                </div><!-- /.blog-post -->
+                        {{ post.abstract }}
+                        <a href="{{ url('sonata_news_view', { 'permalink': sonata_news_permalink(post) }) }}">Продолжение...</a>
+                    </div><!-- /.blog-post -->
+
+
+                {% endfor %}
 
                 <nav class="blog-pagination">
                     <a class="btn btn-outline-primary" href="#">Предыдущие</a>

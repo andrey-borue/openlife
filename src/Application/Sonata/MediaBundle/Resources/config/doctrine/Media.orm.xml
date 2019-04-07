@@ -17,5 +17,7 @@
             <generator strategy="AUTO"/>
         </id>
 
+        <field name="version" type="integer" version="true"/>
+
     </entity>
 </doctrine-mapping>

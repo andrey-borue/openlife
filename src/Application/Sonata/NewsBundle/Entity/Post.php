@@ -20,6 +20,11 @@ class Post extends BasePost
     protected $id;
 
     /**
+     * @var int
+     */
+    protected $version;
+
+    /**
      * Get id.
      *
      * @return int $id

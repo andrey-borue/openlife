@@ -20,6 +20,11 @@ class Comment extends BaseComment
     protected $id;
 
     /**
+     * @var int
+     */
+    protected $version;
+
+    /**
      * Get id.
      *
      * @return int $id

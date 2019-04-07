@@ -20,6 +20,11 @@ class GalleryHasMedia extends BaseGalleryHasMedia
     protected $id;
 
     /**
+     * @var int
+     */
+    protected $version;
+
+    /**
      * Get id.
      *
      * @return int $id

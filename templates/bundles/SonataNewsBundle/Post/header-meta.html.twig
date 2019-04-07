@@ -1,7 +1,9 @@
+{# var \App\Application\Sonata\NewsBundle\Entity\Post post #}
+
 <p class="blog-post-meta">
     {{ post.publicationDateStart | format_date }},
     {{ 'archive_author'|trans({'%author%': post.author }, 'SonataNewsBundle') }}
-    {%- if post.commentsCount >= 0 -%}
+    {%- if post.commentsCount > 0 -%}
          , <span class="sonata-blog-post-comments-count">{{ 'comments_count'|trans({'%comments_count%': post.commentsCount }, 'SonataNewsBundle') }}</span>
     {%- endif %}
 

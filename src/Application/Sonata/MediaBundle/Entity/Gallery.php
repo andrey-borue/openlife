@@ -20,6 +20,11 @@ class Gallery extends BaseGallery
     protected $id;
 
     /**
+     * @var int
+     */
+    protected $version;
+
+    /**
      * Get id.
      *
      * @return int $id
