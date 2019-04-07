@@ -27,9 +27,12 @@ sonata_media:
                 - sonata.media.provider.vimeo
 
             formats:
-                small: { width: 100 , quality: 70}
-                big:   { width: 500 , quality: 70}
-                wide:   { width: 500 , quality: 70}
+                w100:  { width: 100,  quality: 80}
+                w200:  { width: 200,  quality: 80}
+                w500:  { width: 500,  quality: 80}
+                w800:  { width: 800,  quality: 80}
+                w1000: { width: 1000, quality: 80}
+                w1500: { width: 1500, quality: 80}
 
     cdn:
         server:
@@ -39,7 +42,7 @@ sonata_media:
         local:
             # Directory for uploads should be writable
             directory: "%kernel.project_dir%/public/upload/media"
-            create: false
+            create: false8
 
 #
 #sonata_media:
