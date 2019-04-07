@@ -28,7 +28,7 @@
                     <h2 class="blog-post-title">{{ post.title }}</h2>
                     {% include "bundles/SonataNewsBundle/Post/header-meta.html.twig" %}
 
-                    {% media post.image, 'wide' %}
+                    {% media post.image, 'w500' %}
                     {{ post.content|raw }}
 
 
