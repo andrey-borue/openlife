@@ -8,15 +8,15 @@
             </trans-unit>
             <trans-unit id="sonata_news_archive_breadcrumb">
                 <source>sonata_news_archive_breadcrumb</source>
-                <target>Посты</target>
+                <target>Статьи</target>
             </trans-unit>
             <trans-unit id="sonata_news_block_recent_comments">
                 <source>sonata.news.block.recent_comments</source>
-                <target>Посты - Недавние комментарии</target>
+                <target>Статьи - Недавние комментарии</target>
             </trans-unit>
             <trans-unit id="sonata_news_block_recent_posts">
                 <source>sonata.news.block.recent_posts</source>
-                <target>Посты - Недавние записи</target>
+                <target>Статьи - Недавние записи</target>
             </trans-unit>
             <trans-unit id="archive_author">
                 <source>archive_author</source>

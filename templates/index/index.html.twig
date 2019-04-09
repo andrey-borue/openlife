@@ -1,7 +1,5 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello IndexController!{% endblock %}
-
 {% block body %}
 
     <div class="container">
@@ -25,15 +23,7 @@
                 {#</h3>#}
 
                 {% for post in lastPosts %}
-                    <div class="blog-post">
-                        <h2 class="blog-post-title">{{ post.title }}</h2>
-                        {% include "bundles/SonataNewsBundle/Post/header-meta.html.twig" with {'post': post} only %}
-
-                        {{ post.abstract }}
-                        <a href="{{ url('sonata_news_view', { 'permalink': sonata_news_permalink(post) }) }}">Продолжение...</a>
-                    </div><!-- /.blog-post -->
-
-
+                    {% include "blog_post/01.html.twig" with {'post': post} only %}
                 {% endfor %}
 
                 <nav class="blog-pagination">

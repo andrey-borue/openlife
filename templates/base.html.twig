@@ -1,8 +1,16 @@
 <!DOCTYPE html>
 <html lang="ru">
+    <!--suppress HtmlRequiredTitleElement -->
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block title %}{{ sonata_seo_title() }}{% endblock %}
+
+        {{ sonata_seo_metadatas() }}
+
+        {{ sonata_seo_link_canonical() }}
+        {{ sonata_seo_lang_alternates() }}
+        {{ sonata_seo_oembed_links() }}
+
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
         {% endblock %}

@@ -1,13 +1,13 @@
 sonata_seo:
   encoding:         UTF-8
   page:
-    title:            Project name
+    title: Открытая жизнь.
     default:          sonata.seo.page.default
     metas:
       name:
-        keywords:             foo bar
-        description:          The description
-        robots:               index, follow
+        keywords: Свингерство, свинг, секс, групповой секс, любовь, парные отношения, секусуальность
+        description: Блог об открытых отношения, свинг встречах и путешествиях.
+        robots: index, follow
 
       property:
         # Facebook application settings
@@ -16,8 +16,8 @@ sonata_seo:
 
         # Open Graph information
         # see http://developers.facebook.com/docs/opengraphprotocol/#types or http://ogp.me/
-        'og:site_name':       Sonata Project Sandbox
-        'og:description':     A demo of the some rich bundles for your Symfony2 projects
+        'og:site_name': "Блог Открытая Жизнь"
+        'og:description': "Блог об открытых отношениях, свингерстве и секусуальности"
 
       http-equiv:
         'Content-Type':         text/html; charset=utf-8

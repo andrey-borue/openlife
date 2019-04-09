@@ -1,7 +1,7 @@
 sonata_news:
-  title:        Open life
+  title: Открытая жизнь
   link:         https://openlife.guru
-  description:  Cool bundles on top of Symfony2
+  description:  Блок сайта Открытая Жизнь
   salt:         'aksdh498hra;lkdfh'
   permalink_generator: sonata.news.permalink.collection #sonata.news.permalink.date # sonata.news.permalink.collection
 

@@ -16,21 +16,7 @@
 
         <div class="sonata-blog-post-list">
             {% for post in pager.getResults() %}
-
-                <div class="blog-post">
-                    <header>
-                    <h2 class="blog-post-title">
-                        <a href="{{ url('sonata_news_view', { 'permalink': sonata_news_permalink(post) }) }}">{{ post.title }}</a>
-                    </h2>
-                    {% include "bundles/SonataNewsBundle/Post/header-meta.html.twig" %}
-                    </header>
-
-                    <div class="blog-post-abtract">
-                    {{ post.abstract }}
-                    </div>
-                </div><!-- /.blog-post -->
-
-                <hr />
+                {% include "blog_post/01.html.twig" with {'post': post} only %}
             {% else %}
                 {{ 'no_post_found'|trans({}, 'SonataNewsBundle') }}
             {% endfor %}

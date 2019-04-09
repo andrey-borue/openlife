@@ -1,6 +1,10 @@
 {% extends 'base.html.twig' %}
 
 
+{% block title %}
+    {{ sonata_seo_title() }}
+{% endblock %}
+
 {% block body %}
 
 
@@ -26,12 +30,9 @@
 
                 <div class="blog-post">
                     <h2 class="blog-post-title">{{ post.title }}</h2>
-                    {% include "bundles/SonataNewsBundle/Post/header-meta.html.twig" %}
-
+                    {% include "bundles/SonataNewsBundle/Post/header-meta.html.twig" with {'post': post} only %}
                     {% media post.image, 'w500' %}
                     {{ post.content|raw }}
-
-
                 </div><!-- /.blog-post -->
 
                 <div class="blog-comments" style="display: none;">
